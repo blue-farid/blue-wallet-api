@@ -1,6 +1,6 @@
 package com.snapp.pay.insurance.bluewallet.api.v1.request;
 
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 //TODO we could add custom messages
@@ -8,8 +8,8 @@ import lombok.Data;
 
 @Data
 public class LoginOrSignupRequest {
-    @NotEmpty
+    @NotBlank(message = "validation.mail.blank")
     private String mail;
-    @NotEmpty
+    @NotBlank(message = "validation.otp.blank")
     private String otp;
 }

@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 public class OtpRequest {
-    @NotBlank
+    @NotBlank(message = "validation.mail.blank")
     private String mail;
 }

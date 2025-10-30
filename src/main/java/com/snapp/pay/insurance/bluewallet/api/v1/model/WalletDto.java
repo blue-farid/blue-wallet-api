@@ -10,5 +10,6 @@ public class WalletDto {
     private Long id;
     @NotNull
     private Long customerId;
+    @NotNull(message = "validation.wallet.balance.null")
     private BigDecimal balance;
 }
